@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 22 nov. 2019 à 09:52
+-- Généré le :  ven. 22 nov. 2019 à 10:50
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `allocine`
 --
+CREATE DATABASE IF NOT EXISTS `allocine` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `allocine`;
 
 -- --------------------------------------------------------
 
@@ -35,6 +37,39 @@ CREATE TABLE IF NOT EXISTS `acteurs` (
   `prenom` varchar(50) NOT NULL,
   `nationalite` varchar(50) NOT NULL,
   PRIMARY KEY (`id_acteurs`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id_admin` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_admin`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaires`
+--
+
+DROP TABLE IF EXISTS `commentaires`;
+CREATE TABLE IF NOT EXISTS `commentaires` (
+  `id_commentaires` int(11) NOT NULL AUTO_INCREMENT,
+  `contenu` text NOT NULL,
+  `date` date NOT NULL,
+  `note` int(11) NOT NULL,
+  `id_films` int(11) NOT NULL,
+  `id_utilisateurs` int(11) NOT NULL,
+  PRIMARY KEY (`id_commentaires`),
+  KEY `commentaires_films_FK` (`id_films`),
+  KEY `commentaires_utilisateurs0_FK` (`id_utilisateurs`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -123,9 +158,31 @@ CREATE TABLE IF NOT EXISTS `realise` (
   KEY `realise_films0_FK` (`id_films`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateurs`
+--
+
+DROP TABLE IF EXISTS `utilisateurs`;
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `id_utilisateurs` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `prenom` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_utilisateurs`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+  ADD CONSTRAINT `commentaires_films_FK` FOREIGN KEY (`id_films`) REFERENCES `films` (`id_films`),
+  ADD CONSTRAINT `commentaires_utilisateurs0_FK` FOREIGN KEY (`id_utilisateurs`) REFERENCES `utilisateurs` (`id_utilisateurs`);
 
 --
 -- Contraintes pour la table `joue`
