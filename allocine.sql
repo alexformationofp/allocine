@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 22 nov. 2019 à 14:43
+-- Généré le :  ven. 22 nov. 2019 à 15:22
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `acteurs` (
   `prenom` varchar(50) NOT NULL,
   `nationalite` varchar(50) NOT NULL,
   PRIMARY KEY (`id_acteurs`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `acteurs`
@@ -63,7 +63,12 @@ INSERT INTO `acteurs` (`id_acteurs`, `nom`, `prenom`, `nationalite`) VALUES
 (17, 'Wasikowska', 'Mia', 'USA'),
 (18, 'Depp', 'Johnny', 'USA'),
 (19, 'Ryder', 'Winona', 'USA'),
-(20, 'West', 'Dianne', 'USA');
+(20, 'West', 'Dianne', 'USA'),
+(21, 'Thurman', 'Uma', 'USA'),
+(22, 'Liu', 'Lucy', 'USA'),
+(23, 'Daryl', 'Hannah', 'USA'),
+(24, 'Travolta', 'John', 'USA'),
+(25, 'L.Jackson', 'Samuel', 'USA');
 
 -- --------------------------------------------------------
 
@@ -169,6 +174,42 @@ CREATE TABLE IF NOT EXISTS `joue` (
   KEY `joue_films0_FK` (`id_films`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `joue`
+--
+
+INSERT INTO `joue` (`id_acteurs`, `id_films`) VALUES
+(21, 1),
+(22, 1),
+(23, 1),
+(21, 2),
+(24, 2),
+(25, 2),
+(1, 3),
+(2, 3),
+(3, 3),
+(3, 4),
+(4, 4),
+(5, 4),
+(5, 5),
+(7, 5),
+(10, 5),
+(11, 6),
+(12, 6),
+(13, 6),
+(14, 7),
+(15, 7),
+(16, 7),
+(8, 8),
+(17, 8),
+(18, 8),
+(18, 9),
+(19, 9),
+(20, 9),
+(6, 10),
+(7, 10),
+(8, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -182,6 +223,24 @@ CREATE TABLE IF NOT EXISTS `possede` (
   PRIMARY KEY (`id_genre`,`id_films`),
   KEY `possede_films0_FK` (`id_films`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `possede`
+--
+
+INSERT INTO `possede` (`id_genre`, `id_films`) VALUES
+(2, 1),
+(3, 2),
+(1, 3),
+(3, 4),
+(2, 5),
+(1, 6),
+(1, 7),
+(4, 8),
+(5, 8),
+(4, 9),
+(5, 9),
+(3, 10);
 
 -- --------------------------------------------------------
 
@@ -222,6 +281,22 @@ CREATE TABLE IF NOT EXISTS `realise` (
   PRIMARY KEY (`id_realisateurs`,`id_films`),
   KEY `realise_films0_FK` (`id_films`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `realise`
+--
+
+INSERT INTO `realise` (`id_realisateurs`, `id_films`) VALUES
+(1, 1),
+(1, 2),
+(4, 3),
+(4, 4),
+(3, 5),
+(5, 6),
+(5, 7),
+(2, 8),
+(2, 9),
+(3, 10);
 
 -- --------------------------------------------------------
 
