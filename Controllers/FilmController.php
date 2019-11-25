@@ -4,6 +4,6 @@ if (isset($_GET['idFilm'])){
 };
 require('Models/Film.php');
 
-$detailsFilm = detaillerFilms($idFilm);
+$detailsFilm = detaillerFilm($idFilm);
 
 require('Views/FilmView.php');
