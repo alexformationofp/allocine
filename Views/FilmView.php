@@ -2,7 +2,7 @@
 
 $title = "Film";
 // include 'header.php';
-var_dump($detailsFilm);
+// var_dump($detailsFilm);
 ?>
 
 <div class="film">
