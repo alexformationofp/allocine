@@ -32,8 +32,11 @@ include 'header.php';
         </div>
     </div>
 </div>
+<?php 
 
-<?php
+?>
+
+
 
 // include 'contact-form.php';
 
