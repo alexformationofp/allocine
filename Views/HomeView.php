@@ -5,18 +5,23 @@ $title = "Home";
 
 ?>
 
-<div id="main" class="">
-        <h2>Liste des films</h2>
-        <ul>
-            <?php 
-            foreach ($listeFilms as $film) :
-                echo '<li>'.$film['titre'].'</li>';
-            endforeach;
-            ?>
-        </ul>
-</div>
+<div id="main" class="films">
 
-<?php
+        
+        <div class="container">            
+            <div class="row"></div>
+                <div class="col-md-4">
+                    
+                    </div>
+                </div>
+            </div>
+            
+</div>
+<?php 
+
+?>
+
+
 
 // include 'contact-form.php';
 
