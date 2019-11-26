@@ -32,7 +32,7 @@
                             <a class="nav-link" href="index.php?page=realisateur">Réalisateurs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Acteurs</a>
+                            <a class="nav-link" href="index.php?page=ListeActeurs">Acteurs</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Connexion</a>
