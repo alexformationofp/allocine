@@ -1,8 +1,8 @@
 <?php
 
-$title = "Film";
-// include 'header.php';
-// var_dump($detailsFilm);
+$title = "Ciné-117 : détails sur ".$detailsFilm['titre'];
+include 'header.php';
+
 ?>
 
 <div class="film">
@@ -11,6 +11,15 @@ $title = "Film";
         <div class="infos">
             <p>Année : <?php echo $detailsFilm['date'] ?></p>
             <p>Durée : <?php echo $detailsFilm['duree'] ?> minutes</p>
+            <p>Avec :</p>
+            <ul>
+                <?php 
+                foreach($acteursFilm as $acteur) :
+                    echo ('<li>'.$acteur['prenom'].' '.$acteur['nom'].'</li>');
+                endforeach;
+            ?>
+            </ul>
+            
         </div>
         <div class="affiche">
             <img src="assets/images/<?php echo $detailsFilm['affiche'] ?>" alt="">

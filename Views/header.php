@@ -13,16 +13,6 @@
 <body>
 
     <header id="header" class="">
-        <ul class="">
-            <li class="">
-                <p>
-                    <a href="#main"><img id="logo" src="" alt=""></a>
-                </p>
-            </li>
-            <li class="" id="">
-		<a href="#main">
-		    <span>Home</span>
-		</a>
-            </li>
-        </ul>
+        <a href="index.php"><h1>Allociné 117</h1></a>
+       
     </header>
