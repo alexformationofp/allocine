@@ -1,6 +1,6 @@
 <?php
 
-$title = "Home";
+$title = "Ciné 117 - Accueil";
 include 'header.php';
 
 ?>
@@ -16,7 +16,7 @@ include 'header.php';
         foreach($listeFilms as $film) :
         $idFilm = $film['id_films'];
         ?>
-        <div class="col-md-4">
+        <div class="col-sm-6 col-md-4">
             <a href="index.php?page=Film&idFilm=<?php echo $idFilm ?>" target="_blank">
                 <div class="card">
                     <img src="assets/images/<?php echo $film['affiche'] ?>" class="card-img-top" alt="">

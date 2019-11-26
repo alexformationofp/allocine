@@ -13,6 +13,10 @@ function detaillerFilm($f){
 
 function afficherActeurs($f){
     global $bdd;
-    $acteurs = $bdd->prepare('SELECT * FROM acteurs INNER JOIN joue ON acteurs.id_acteurs = joue.id_films')
-}
+    $acteurs = $bdd->prepare('SELECT * FROM acteurs LEFT JOIN joue ON acteurs.id_acteurs = joue.id_acteurs WHERE joue.id_films = ?');
+    $acteurs->execute([$f]);
+    $acteurs = $acteurs->fetchAll();
+    return $acteurs;
+};
 
+// SELECT * FROM acteurs LEFT JOIN joue ON acteurs.id_acteurs = joue.id_acteurs WHERE joue.id_films = 2;
