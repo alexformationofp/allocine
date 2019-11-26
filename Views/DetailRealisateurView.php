@@ -9,9 +9,15 @@ include 'header.php';
             <h1>Les Détails</h1>
         </div>
         <div class="row justify-content-center">
-            <?php 
-                foreach ($details as $details);            
+            <?php
+            foreach ($details as $details);
             ?>
         </div>
     </div>
 </div>
+<?php
+
+// include 'contact-form.php';
+
+include 'footer.php';
+?>

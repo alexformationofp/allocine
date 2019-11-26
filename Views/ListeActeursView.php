@@ -13,9 +13,9 @@ include 'header.php';
         <div class="row justify-content-center">
             <ul>
                 <?php
-                    foreach ($listeActeurs as $acteur):
+                foreach ($listeActeurs as $acteur) :
                     $idActeur = $acteur['id_acteurs']; ?>
-                    <li><a href="index.php?page=acteur&idActeur=<?php echo $idActeur ?>"><?php echo $acteur['prenom'].' '.$acteur['nom'] ?></a></li>
+                    <li><a href="index.php?page=acteur&idActeur=<?php echo $idActeur ?>"><?php echo $acteur['prenom'] . ' ' . $acteur['nom'] ?></a></li>
                 <?php
                 endforeach;
                 ?>
@@ -23,3 +23,9 @@ include 'header.php';
         </div>
     </div>
 </div>
+<?php
+
+// include 'contact-form.php';
+
+include 'footer.php';
+?>
