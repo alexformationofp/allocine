@@ -14,5 +14,5 @@
 
     <header id="header" class="">
         <a href="index.php"><h1>Allociné 117</h1></a>
-       
+        <a href="index.php?page=realisateur"><h1>Réalisateurs</h1></a>
     </header>
