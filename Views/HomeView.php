@@ -17,7 +17,7 @@ include 'header.php';
         $idFilm = $film['id_films'];
         ?>
         <div class="col-sm-6 col-md-4">
-            <a href="index.php?page=Film&idFilm=<?php echo $idFilm ?>" target="_blank">
+            <a href="index.php?page=Film&idFilm=<?php echo $idFilm ?>">
                 <div class="card">
                     <img src="assets/images/<?php echo $film['affiche'] ?>" class="card-img-top" alt="">
                     <div class="card-body">
