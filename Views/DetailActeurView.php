@@ -4,17 +4,18 @@ include 'header.php';
 ?>
 
 <div class="container">
-    <div class="row justify-content-center">
-        <h2><?php echo $detailsActeur['prenom'].' '.$detailsActeur['nom'] ?></h2>       
-    </div>
-    <div class="row mb-2">
+   
+    <div class="row mb-2 mt-2">
         <div class="col-md-4">
-            <img src="assets/images/<?php echo $detailsActeur['image'] ?>" alt="Photo acteur">
+            <img src="assets/images/<?php echo $detailsActeur['image'] ?>" class="img-fluid" alt="Photo acteur">
         </div>
         <div class="col-md-8">
             <div class="row">
-                <p>Nationalité : <?php echo $detailsActeur['nationalite'] ?></p>
+                <h2><?php echo $detailsActeur['prenom'].' '.$detailsActeur['nom'] ?></h2> 
             </div>
+            <div class="row">
+                 <p>Nationalité : <?php echo $detailsActeur['nationalite'] ?></p>
+            </div>        
             <div class="row">
                 <?php
                 foreach($listeFilms as $film) :

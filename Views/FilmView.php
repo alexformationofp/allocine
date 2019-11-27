@@ -12,9 +12,14 @@ include 'header.php';
   
     <div class="row mb-2">
         <div class="col-md-6">
-            <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) : echo $realisateur['nom'];
-                                echo " " . $realisateur['prenom'];
-                            endforeach; ?></p>
+            <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) : 
+                                $idRealisateur = $realisateur['id_realisateurs']
+                                ?>
+                                <a href="index.php?page=DetailRealisateur&idRealisateur=<?php echo $idRealisateur?>"><?php
+                                echo $realisateur['prenom'];
+                                echo " " . $realisateur['nom'];
+                                ?></a></p><?php
+                                endforeach;?>
             <p>Genres : <?php foreach ($genresFilm as $genre) : echo " " . $genre['type'];
                         endforeach; ?></p>
             <p>Année : <?php echo $detailsFilm['date'] ?></p>
@@ -23,7 +28,8 @@ include 'header.php';
             <ul>
                 <?php
                 foreach ($acteursFilm as $acteur) :
-                    echo ('<li>' . $acteur['prenom'] . ' ' . $acteur['nom'] . '</li>');
+                    $idActeur = $acteur['id_acteurs'];
+                    echo ('<li><a href="index.php?page=DetailActeur&idActeur='.$idActeur.'">'. $acteur['prenom'] . ' ' . $acteur['nom'] . '</a></li>');
                 endforeach;
                 ?>
             </ul>
