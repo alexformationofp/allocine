@@ -1,3 +1,12 @@
+<?php session_start();
+if (isset($_SESSION['idUser'])){
+    $prenomUser = $_SESSION['prenomUser'];
+    $ongletConnexion = 'Hello '.$prenomUser; 
+}else{
+    $ongletConnexion = 'Connexion';
+};
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -35,7 +44,7 @@
                             <a class="nav-link" href="index.php?page=ListeActeurs">Acteurs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Connexion</a>
+                            <a class="nav-link" href="index.php?page=ConnexionUser"><?php echo $ongletConnexion?></a>
                         </li>
                     </ul>
                 </div>
