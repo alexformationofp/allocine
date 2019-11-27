@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 26 nov. 2019 à 15:41
+-- Généré le :  mer. 27 nov. 2019 à 08:50
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `acteurs` (
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `nationalite` varchar(50) NOT NULL,
+  `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id_acteurs`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
@@ -43,32 +44,32 @@ CREATE TABLE IF NOT EXISTS `acteurs` (
 -- Déchargement des données de la table `acteurs`
 --
 
-INSERT INTO `acteurs` (`id_acteurs`, `nom`, `prenom`, `nationalite`) VALUES
-(1, 'Hamill', 'Mark', 'USA'),
-(2, 'Fischer', 'Carrie', 'Angleterre'),
-(3, 'Ford', 'Harrison', 'USA'),
-(4, 'Allen', 'Karen', 'USA'),
-(5, 'Freeman', 'Paul', 'USA'),
-(6, 'Norton', 'Edward', 'USA'),
-(7, 'Pitt', 'Brad', 'USA'),
-(8, 'Bonham Carter', 'Helena', 'Angleterre'),
-(9, 'Freeman', 'Morgan', 'USA'),
-(10, 'Spacey', 'Kevin', 'USA'),
-(11, 'Schwarzenegger', 'Arnold', 'USA'),
-(12, 'Stone', 'Sharon', 'USA'),
-(13, 'Ironside', 'Michael', 'USA'),
-(14, 'Van Dien', 'Casper', 'USA'),
-(15, 'Meyer', 'Dina', 'USA'),
-(16, 'Richards', 'Denise', 'USA'),
-(17, 'Wasikowska', 'Mia', 'USA'),
-(18, 'Depp', 'Johnny', 'USA'),
-(19, 'Ryder', 'Winona', 'USA'),
-(20, 'West', 'Dianne', 'USA'),
-(21, 'Thurman', 'Uma', 'USA'),
-(22, 'Liu', 'Lucy', 'USA'),
-(23, 'Daryl', 'Hannah', 'USA'),
-(24, 'Travolta', 'John', 'USA'),
-(25, 'L.Jackson', 'Samuel', 'USA');
+INSERT INTO `acteurs` (`id_acteurs`, `nom`, `prenom`, `nationalite`, `image`) VALUES
+(1, 'Hamill', 'Mark', 'USA', 'mark.jpg'),
+(2, 'Fischer', 'Carrie', 'Angleterre', 'carrie.jpg'),
+(3, 'Ford', 'Harrison', 'USA', 'harrison.jpg'),
+(4, 'Allen', 'Karen', 'USA', 'karen.jpg'),
+(5, 'Freeman', 'Paul', 'USA', 'paul.jpg'),
+(6, 'Norton', 'Edward', 'USA', 'norton.jpg'),
+(7, 'Pitt', 'Brad', 'USA', 'brad.jpg'),
+(8, 'Bonham Carter', 'Helena', 'Angleterre', 'helena.jpg'),
+(9, 'Freeman', 'Morgan', 'USA', 'morgan.jpg'),
+(10, 'Spacey', 'Kevin', 'USA', 'kevin.jpg'),
+(11, 'Schwarzenegger', 'Arnold', 'USA', 'arnold.jpg'),
+(12, 'Stone', 'Sharon', 'USA', 'sharon.jpg'),
+(13, 'Ironside', 'Michael', 'USA', 'michael.jpg'),
+(14, 'Van Dien', 'Casper', 'USA', 'casper.jpg'),
+(15, 'Meyer', 'Dina', 'USA', 'dina.jpg'),
+(16, 'Richards', 'Denise', 'USA', 'denise.jpg'),
+(17, 'Wasikowska', 'Mia', 'USA', 'mia.jpg'),
+(18, 'Depp', 'Johnny', 'USA', 'johnny.jpg'),
+(19, 'Ryder', 'Winona', 'USA', 'winona.jpg'),
+(20, 'West', 'Dianne', 'USA', 'dianne.jpg'),
+(21, 'Thurman', 'Uma', 'USA', 'uma.jpg'),
+(22, 'Liu', 'Lucy', 'USA', 'lucy.jpg'),
+(23, 'Daryl', 'Hannah', 'USA', 'hannah.jpg'),
+(24, 'Travolta', 'John', 'USA', 'john.jpg'),
+(25, 'L.Jackson', 'Samuel', 'USA', 'samuel.jpg');
 
 -- --------------------------------------------------------
 
