@@ -5,10 +5,13 @@ include 'header.php';
 
 ?>
 
-<div class="film">
-    <h1><?php echo $detailsFilm['titre'] ?></h1>
-    <div class="details">
-        <div class="infos">
+<div class="container">
+    <div class="row justify-content-center">
+        <h2><?php echo $detailsFilm['titre'] ?></h2>       
+    </div>
+  
+    <div class="row mb-2">
+        <div class="col-md-6">
             <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) : echo $realisateur['nom'];
                                 echo " " . $realisateur['prenom'];
                             endforeach; ?></p>
@@ -25,11 +28,11 @@ include 'header.php';
                 ?>
             </ul>
         </div>
-        <div class="affiche">
+        <div class="col-md-6">
             <img src="assets/images/<?php echo $detailsFilm['affiche'] ?>" alt="">
         </div>
     </div>
-    <div class="synopsis">
+    <div class="row synopsis">
         <p><?php echo $detailsFilm['synopsis'] ?></p>
     </div>
 </div>
