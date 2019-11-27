@@ -13,9 +13,9 @@ include 'header.php';
     <div class="row mb-2">
         <div class="col-md-6">
             <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) : 
-                                $idRealisateur = $realisateur['id_realisateurs']
+                                $idReal = $realisateur['id_realisateurs']
                                 ?>
-                                <a href="index.php?page=DetailRealisateur&idRealisateur=<?php echo $idRealisateur?>"><?php
+                                <a href="index.php?page=DetailRealisateur&idReal=<?php echo $idReal?>"><?php
                                 echo $realisateur['prenom'];
                                 echo " " . $realisateur['nom'];
                                 ?></a></p><?php
