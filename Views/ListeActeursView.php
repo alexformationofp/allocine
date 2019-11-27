@@ -15,7 +15,7 @@ include 'header.php';
                 <?php
                 foreach ($listeActeurs as $acteur) :
                     $idActeur = $acteur['id_acteurs']; ?>
-                    <li><a href="index.php?page=acteur&idActeur=<?php echo $idActeur ?>"><?php echo $acteur['prenom'] . ' ' . $acteur['nom'] ?></a></li>
+                    <li><a href="index.php?page=DetailActeur&idActeur=<?php echo $idActeur ?>"><?php echo $acteur['prenom'] . ' ' . $acteur['nom'] ?></a></li>
                 <?php
                 endforeach;
                 ?>

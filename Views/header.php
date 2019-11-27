@@ -29,7 +29,7 @@
                             <a class="nav-link" href="Index.php">Accueil <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?page=realisateur">Réalisateurs</a>
+                            <a class="nav-link" href="index.php?page=ListeRealisateurs">Réalisateurs</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?page=ListeActeurs">Acteurs</a>
