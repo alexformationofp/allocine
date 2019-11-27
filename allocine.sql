@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 27 nov. 2019 à 08:50
+-- Généré le :  mer. 27 nov. 2019 à 13:58
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -313,8 +313,16 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id_utilisateurs`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id_utilisateurs`, `nom`, `prenom`, `email`, `password`) VALUES
+(1, 'Doe', 'John', 'john.doe@gmail.com', '1234');
 
 --
 -- Contraintes pour les tables déchargées
