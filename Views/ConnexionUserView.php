@@ -4,7 +4,7 @@ include 'header.php';
 ?>
 <div class="container">
     <div class="row">
-        <div class="connexion col-6">
+        <div class="connexion col-sm-5 fondgris">
             <?php if (isset($_GET['erreur'])) { ?>
                 <div class="erreur">
                     <p>Erreur dans l'identification</p>
@@ -20,7 +20,7 @@ include 'header.php';
             </form>
         </div>
 
-        <div class="inscription col-6">
+        <div class="inscription col-sm-6 offset-sm-1 fondgris">
             <form action="?page=ConnexionUser" method="post">
 
                 <label for="nouveauPrenom">Votre prénom :</label>

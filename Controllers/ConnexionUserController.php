@@ -14,15 +14,16 @@ if (isset($_POST['emailInput'])){
     $emailInput = $_POST['emailInput'];
     $passwordInput = $_POST['passwordInput'];
     $connexion = verifierUtilisateur($emailInput, $passwordInput);
-    if ($connexion[0] == true){
+    if ($connexion == true){
             if(isset($provenance) && $provenance != false){
                  header('Location: index.php?page=Film&idFilm='.$provenance);
             }
             else{
-                header('Location: index.php');
+                header('Location: index.php');var_dump('prout');
             }
     }else{
         header('Location: index.php?page=ConnexionUser&erreur');
+        
     }
     
 }else if (isset($_SESSION['idUser'])){

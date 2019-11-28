@@ -5,7 +5,7 @@ include 'header.php';
 
 ?>
 
-<div class="container">
+<div class="container fondgris">
     <div class="row justify-content-center">
         <h2><?php echo $detailsFilm['titre'] ?></h2>       
     </div>
