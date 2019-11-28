@@ -1,4 +1,1 @@
-body {
-  font-family: sans-serif; }
-
-/*# sourceMappingURL=style.css.map */
+body{font-family:sans-serif;background:url(../images/salleCinema2.jpg) no-repeat;background-size:cover;background-position:center;background-attachment:fixed;scroll-behavior:smooth}body .container{background-color:rgba(255,255,255,0.6)}div#main div.container .card.m-2{height:426.78px}div#main div.container .card .card-title{font-size:1rem}
