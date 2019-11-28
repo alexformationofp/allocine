@@ -2,7 +2,8 @@
 
 $title = "Ciné 117 - Ajouter un film";
 include 'header.php';
-if (isset($last_id)) { ?>
+if (isset($last_id)) { 
+?>
     <h2>Renseignez les détails de </h2>
     <form action="?page=AjoutFilm" method="post">
         <input type="hidden" name="last_id" value="<?php echo $last_id ?>">
