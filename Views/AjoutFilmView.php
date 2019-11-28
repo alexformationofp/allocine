@@ -63,7 +63,7 @@ if (isset($last_id)) {
         <input type="submit" value="Envoyer">
     </form>
     <?php
-
+}
 // include 'contact-form.php';
 
 include 'footer.php';
