@@ -16,7 +16,7 @@ include 'header.php';
             foreach ($listeFilms as $film) :
                 $idFilm = $film['id_films'];
                 ?>
-                <div class="col-sm-6 col-md-4 col-lg-3 ">
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <a href="index.php?page=Film&idFilm=<?php echo $idFilm ?>">
                         <div class="card m-2">
                             <img src="assets/images/<?php echo $film['affiche'] ?>" class="card-img-top" alt="">

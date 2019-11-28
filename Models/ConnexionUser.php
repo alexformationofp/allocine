@@ -10,18 +10,29 @@ function verifierUtilisateur($email, $password){
         if ($utilisateur['email']==$email && $utilisateur['password']==$password){
             $_SESSION['idUser'] = $utilisateur['id_utilisateurs'];
             $_SESSION['prenomUser'] = $utilisateur['prenom'];
-            // header('Location: index.php');
-            $connexion = true;
-            
-            
+            $connexion = true;        
         }else{
-            // header('Location: index.php?page=ConnexionUser');
             $connexion = false;
         };
-
     endforeach;    
     return [$connexion];
-    // return $_SESSION['idUser'];
-   
 };
+
+function ajouterUtilisateur($nom, $prenom, $email, $password){
+    global $bdd;
+    $ajoutUtilisateur = $bdd->prepare('INSERT INTO utilisateurs (nom, prenom, email, password) VALUES (:nom, :prenom, :email, :password);');
+    $ajoutUtilisateur->execute([
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'email' => $email,
+        'password' => $password
+    ]);
+    $last_id = $bdd->query('SELECT * FROM utilisateurs where id_utilisateurs = LAST_INSERT_ID();');
+    // var_dump($last_id);
+    $result = $last_id->fetch(PDO::FETCH_ASSOC);
+    
+    $_SESSION['idUser'] = $result['id_utilisateurs'];
+    $_SESSION['prenomUser'] = $prenom;
+  
+}
 
