@@ -14,7 +14,7 @@ include 'header.php';
                 $idReal = $real['id_realisateurs'];
                 ?>
                 <div class="col-sm-6 col-md-4">
-                    <a href="index.php?page=DetailRealisateur&idReal= <?php echo $idReal ?>">
+                    <a href="index.php?page=DetailRealisateur&idReal=<?php echo $idReal ?>">
                         <div class="card">
                             <img src="assets/images/<?php echo $real['image']  ?>" class="card-img-top photoReal" alt="">
                             <div class="card-body">

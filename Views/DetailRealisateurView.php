@@ -39,7 +39,7 @@ include 'header.php';
                 $idFilm = $filmReal['id_films'];
             ?>
             <div class="col-md-4">
-                <a href="index.php?page=film&idFilm= <?php echo $idFilm ?>">
+                <a href="index.php?page=film&idFilm=<?php echo $idFilm ?>">
                     <div class="card">
                         <img src="assets/images/<?php echo $filmReal['affiche'] ?>"  alt="" class="card-img-top">
                         <div class="card-body">
