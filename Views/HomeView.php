@@ -7,7 +7,7 @@ include 'header.php';
 
 <div id="main" class="">
 
-    <div class="container pt-5 pb-2">
+    <div class="container fondgris pt-5 pb-2">
         <div class="row justify-content-center">
             <h2 class="titreFilms mb-4"> Listes des Films</h2>
         </div>

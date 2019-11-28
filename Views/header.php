@@ -28,7 +28,7 @@ if (isset($_SESSION['idUser'])){
 
     <header id="header" class="">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
+            <div class="container fondgris">
                 <a class="navbar-brand" href="index.php">
                     <h1>Allociné 117</h1>
                 </a>
@@ -47,7 +47,7 @@ if (isset($_SESSION['idUser'])){
                             <a class="nav-link" href="index.php?page=ListeActeurs">Acteurs</a>
                         </li>
                         <?php if (isset($_SESSION['idUser'])){
-                                    echo '<li id="" class="nav-item"><a class="nav-link" href="">Hello '.$prenomUser.' !</a></li>'; 
+                                    echo '<li id="bonjour" class="nav-item"><a class="nav-link" href="">Hello '.$prenomUser.' !</a></li>'; 
                                 }
                         ?>
                         <li class="nav-item">
