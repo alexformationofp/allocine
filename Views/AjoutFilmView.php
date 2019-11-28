@@ -67,4 +67,3 @@ if (isset($last_id)) {
 // include 'contact-form.php';
 
 include 'footer.php';
-?>

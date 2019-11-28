@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 require('Models/ListeRealisateurs.php');
 
 $detailsReal = detaillerReal();
