@@ -41,6 +41,46 @@ include 'header.php';
     <div class="row synopsis">
         <p><?php echo $detailsFilm['synopsis'] ?></p>
     </div>
+    <?php
+        if (isset($_SESSION['idUser'])){?>
+            <form action="index.php?page=Film&idFilm=<?php echo $idFilm?>" method="post">
+                <label for="note">Votre note :</label>
+                <select name="note" id="note">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="commentaire">Votre commentaire :</label>
+                <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
+                <input type="submit" value="Envoyer">
+            </form>
+      <?php  } else {
+          echo '<a href="index.php?page=ConnexionUser&provenance='.$idFilm.'">Pour écrire un commentaire, connectez-vous</a>';
+         
+      }
+    ?>
+
+    <div class="row commentaires">
+        <?php 
+            foreach ($commentaires as $commentaire) : ?>
+            <div class="commentaire">
+                <div class="row">
+                    <div class="col-md-6"><p><?php echo $commentaire['prenom'] ?></p></div>
+                    <div class="col-md-6"><p><?php echo $commentaire['note'] ?></p></div>
+                </div>
+                <div class="row no-gutters">
+                    <p><?php echo $commentaire['date'] ?></p>
+                </div>
+                <div class="row no-gutters">
+                    <?php echo $commentaire['contenu']?>
+                </div>
+            </div>
+            <?php endforeach;
+        ?>
+    </div>
+
 </div>
 <?php
 

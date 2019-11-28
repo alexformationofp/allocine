@@ -25,7 +25,7 @@ function afficherRealisateurs($f){
     $realisateurs->execute([$f]);
     $realisateurs = $realisateurs->fetchAll();
     return $realisateurs;
-}
+};
 
 function afficherGenres($f){
     global $bdd;
@@ -33,5 +33,28 @@ function afficherGenres($f){
     $genres->execute([$f]);
     $genres = $genres->fetchAll();
     return $genres;
+};
+
+function afficherCommentaires($f){
+    global $bdd;
+    $commentaires = $bdd->prepare('SELECT * FROM commentaires JOIN utilisateurs ON utilisateurs.id_utilisateurs = commentaires.id_utilisateurs WHERE id_films= ?;');
+    $commentaires->execute([$f]);
+    $commentaires = $commentaires->fetchAll();
+    return $commentaires;
+};
+
+function envoyerCommentaire($contenu, $note, $film, $user){
+   
+    global $bdd;
+    // global $idUser;
+    $ajoutCommentaire = $bdd->prepare('INSERT INTO commentaires (contenu, note, id_films, id_utilisateurs) VALUES (:contenu, :note, :film, :user);');
+    $ajoutCommentaire->execute([
+        'contenu' => $contenu,
+        'note' => $note,
+        'film' => $film,
+        'user' => $user
+    ]);
+   
+
 }
 // SELECT * FROM acteurs LEFT JOIN joue ON acteurs.id_acteurs = joue.id_acteurs WHERE joue.id_films = 2;

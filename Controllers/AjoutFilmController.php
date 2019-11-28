@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('Models/AjoutFilm.php');
 
 //Cas où on a ajouté un film

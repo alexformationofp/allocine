@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 27 nov. 2019 à 13:58
+-- Généré le :  jeu. 28 nov. 2019 à 10:18
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -95,14 +95,23 @@ DROP TABLE IF EXISTS `commentaires`;
 CREATE TABLE IF NOT EXISTS `commentaires` (
   `id_commentaires` int(11) NOT NULL AUTO_INCREMENT,
   `contenu` text NOT NULL,
-  `date` date NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `note` int(11) NOT NULL,
   `id_films` int(11) NOT NULL,
   `id_utilisateurs` int(11) NOT NULL,
   PRIMARY KEY (`id_commentaires`),
   KEY `commentaires_films_FK` (`id_films`),
   KEY `commentaires_utilisateurs0_FK` (`id_utilisateurs`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `commentaires`
+--
+
+INSERT INTO `commentaires` (`id_commentaires`, `contenu`, `date`, `note`, `id_films`, `id_utilisateurs`) VALUES
+(11, 'Pulp Fiction un film qu\'il est bien !', '2019-11-28 06:18:44', 3, 2, 1),
+(12, 'Pulp Fiction un film qu\'il est bien !', '2019-11-28 06:18:49', 3, 2, 1),
+(13, 'Pulp Fiction un film qu\'il est bien !', '2019-11-28 07:38:37', 3, 2, 1);
 
 -- --------------------------------------------------------
 

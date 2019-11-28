@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require('Models/connexion.php');
 
 function verifierUtilisateur($email, $password){
@@ -10,7 +10,18 @@ function verifierUtilisateur($email, $password){
         if ($utilisateur['email']==$email && $utilisateur['password']==$password){
             $_SESSION['idUser'] = $utilisateur['id_utilisateurs'];
             $_SESSION['prenomUser'] = $utilisateur['prenom'];
-            header('Location: index.php');
+            // header('Location: index.php');
+            $connexion = true;
+            
+            
+        }else{
+            // header('Location: index.php?page=ConnexionUser');
+            $connexion = false;
         };
-    endforeach;
+
+    endforeach;    
+    return [$connexion];
+    // return $_SESSION['idUser'];
+   
 };
+
