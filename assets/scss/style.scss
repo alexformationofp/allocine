@@ -21,6 +21,9 @@ body{
         font-family: $fs2;
         font-size: 2em;
     }
+    ul{
+        padding: 0;
+    }
     li{
         list-style-type: none;
     }
@@ -103,12 +106,10 @@ div {
             &.synopsis {
                 text-align: justify;
             }
-            &.hrFilm{
-                background: rgba(0, 0, 0, 0.4);
-                height: 1px;
-                margin-bottom: 20px;
-            }
             &.commentaires{
+                .commentaire{
+                    width: 100%;
+                }
                 .interlineComs{
                     line-height: 0.3rem;
                 }

@@ -7,12 +7,12 @@ include 'header.php';
 
 <div class="container pt-sm-5 fondgris">
     <div class="row justify-content-center pb-sm-3">
-        
+
     </div>
     <div class="row mb-2">
-        
+
         <div class="col-md-6 align-self-center presentationFilm">
-            <h2><?php echo $detailsFilm['titre'] ?></h2>
+            <h2 class="pb-3"><?php echo $detailsFilm['titre'] ?></h2>
             <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) :
                                 $idReal = $realisateur['id_realisateurs']
                                 ?>
@@ -43,7 +43,7 @@ include 'header.php';
         <p class="titleSynopsis">Synopsis :</p>
         <p><?php echo $detailsFilm['synopsis'] ?></p>
     </div>
-    <div class="hrFilm"></div>
+    
     <!-- Formulaire Commentaire -->
     <div class="row m-2">
         <?php
@@ -67,23 +67,25 @@ include 'header.php';
         ?>
     </div>
     <!-- Affichage Commentaire -->
-    <div class="row commentaires">
+    <div class="commentaires">
         <?php
         foreach ($commentaires as $commentaire) : ?>
-            <div class="commentaire m-4">
-                <div class="row interlineComs">
-                    <div class="col-md-6">
-                        <p>Pseudo : <?php echo $commentaire['prenom'] ?></p>
+            <div class="row">
+                <div class="commentaire m-3">
+                    <div class="row interlineComs">
+                        <div class="col-md-3">
+                            <p>Pseudo : <?php echo $commentaire['prenom'] ?></p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Note : <?php echo $commentaire['note'] ?></p>
+                        </div>
+                        <div class="col-md-2">
+                            <p class="dateCommentaire"><?php echo $commentaire['date'] ?></p>
+                        </div>
                     </div>
-                    <div class="col-md-5">
-                        <p>Note : <?php echo $commentaire['note'] ?></p>
+                    <div class="row no-gutters">
+                        <?php echo $commentaire['contenu'] ?>
                     </div>
-                </div>
-                <div class="row no-gutters">
-                    <p class="dateCommentaire"><?php echo $commentaire['date'] ?></p>
-                </div>
-                <div class="row no-gutters">
-                    <?php echo $commentaire['contenu'] ?>
                 </div>
             </div>
         <?php endforeach;
