@@ -4,8 +4,8 @@ include 'header.php';
 
 ?>
 <div id="main" class="">
-<div class="container">
-        <div class="row justify-content-center">
+<div class="container pt-2 pt-sm-5 pb-sm-4 fondgris">
+        <div class="row justify-content-center pb-4">
             <h1>Les Détails</h1>
         </div>
         <div class="row justify-content-center">
@@ -33,17 +33,17 @@ include 'header.php';
             endforeach;
             ?>
         </div>
-        <div class="row">
+        <div class="row pt-3 pt-sm-4">
             <?php 
             foreach($films as $filmReal) : 
                 $idFilm = $filmReal['id_films'];
             ?>
             <div class="col-md-4">
                 <a href="index.php?page=film&idFilm=<?php echo $idFilm ?>">
-                    <div class="card">
+                    <div class="carteDetailReal">
                         <img src="assets/images/<?php echo $filmReal['affiche'] ?>"  alt="" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">
+                        <div class="titreDetailReal">
+                            <h5>
                                 <?php echo $filmReal['titre'] ?>
                             </h5>
                         </div>

@@ -223,3 +223,77 @@ div {
         }
     }
 }
+
+/* ----------------------- DETAIL REALISATEURS  ----------------------- */
+#main{
+    .carteDetailReal{
+        width: 100%;
+        margin-bottom: 20x;
+        transition: all .3s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
+        img{
+            width: 100%;
+        }
+        .titreDetailReal{
+            text-align: center;
+            height: 50px;
+            background-color: grey;
+            /* vertical-align: middle; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+                h5{
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    width: 100%
+                }
+                p{
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+        }
+    }
+}
+
+/* ----------------------- DETAIL ACTEURS  ----------------------- */
+#main{
+    .carteDetailActeur{
+        width: 100%;
+        margin-bottom: 20x;
+        transition: all .3s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
+        img{
+            width: 100%;
+        }
+        .titreDetailActeur{
+            text-align: center;
+            height: 50px;
+            background-color: grey;
+            /* vertical-align: middle; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+                h5{
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    width: 100%
+                }
+                p{
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+        }
+    }
+}
