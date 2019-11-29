@@ -1,7 +1,10 @@
-<footer id="footer" class="">
-    <p id="copyright" class="">
-        © Allociné 117 - 2019
-    </p>
+<footer id="footer" class="mt-2 mb-0">
+    <div class="container fondgris p-3">
+        <p id="copyright" class="">
+            © Allociné 117 - 2019
+        </p>
+    </div>
+
 
 </footer>
 

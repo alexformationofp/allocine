@@ -20,14 +20,27 @@ body{
 /* ----------------------- HEADER ----------------------- */
 header {
     nav {
-        
+
+    }
+}
+
+/* ----------------------- FOOTER ----------------------- */
+
+footer {
+    div{
+        &.container{
+            p{
+                &#copyright{
+                    margin-bottom: initial;
+                }
+            }
+        }
     }
 }
 
 /* ----------------------- HOME VIEW ----------------------- */
 div{
-    &#main{
-        
+    &#main{        
         div{
             &.container {
             // padding-top: 5%;
@@ -46,3 +59,34 @@ div{
     }
 }
 
+/* ----------------------- FILM VIEW ----------------------- */
+
+div {
+    &.container{
+        div{
+            &.presentationFilm{
+                text-align: center;
+            }
+            .titleSynopsis{
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            &.synopsis {
+                text-align: justify;
+            }
+            &.hrFilm{
+                background: rgba(0, 0, 0, 0.4);
+                height: 1px;
+                margin-bottom: 20px;
+            }
+            &.commentaires{
+                .interlineComs{
+                    line-height: 0.3rem;
+                }
+                .dateCommentaire{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

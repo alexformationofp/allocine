@@ -14,7 +14,7 @@ if (isset($_POST['emailInput'])){
     $emailInput = $_POST['emailInput'];
     $passwordInput = $_POST['passwordInput'];
     $connexion = verifierUtilisateur($emailInput, $passwordInput);
-    if ($connexion[0] == true){
+    if ($connexion == true){
             if(isset($provenance) && $provenance != false){
                  header('Location: index.php?page=Film&idFilm='.$provenance);
             }
