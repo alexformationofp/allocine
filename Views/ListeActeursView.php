@@ -6,7 +6,7 @@ include 'header.php';
 ?>
 
 <div id="main">
-    <div class="container">
+    <div class="container fondgris">
         <div class="row justify-content-center">
             <h2>Liste des acteurs</h2>
         </div>

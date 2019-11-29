@@ -4,7 +4,7 @@ include 'header.php';
 
 ?>
 <div id="main" class="">
-<div class="container">
+<div class="container pt-2 pt-sm-5 fondgris">
         <div class="row justify-content-center">
             <h1>Les Détails</h1>
         </div>
