@@ -41,10 +41,14 @@ body{
 
 
 /* ----------------------- HEADER ----------------------- */
-header {
-    nav {
-
-    }
+#bonjour{
+    cursor: default;
+    font-weight: bold;
+    color: black;
+    &:hover{
+        color: black;
+        
+    };
 }
 
 /* ----------------------- FOOTER ----------------------- */
@@ -97,7 +101,10 @@ div {
     &.container{
         div{
             &.presentationFilm{
-                text-align: center;
+                font-size: 1em;
+                h2{
+                    font-size: 3em;
+                }
             }
             .titleSynopsis{
                 font-size: 1rem;
@@ -110,15 +117,23 @@ div {
                 .commentaire{
                     width: 100%;
                 }
-                .interlineComs{
-                    line-height: 0.3rem;
+                p:nth-of-type(2n){
+                    padding: 0 15px;
                 }
-                .dateCommentaire{
-                    font-size: 0.9rem;
-                }
+              
             }
         }
     }
+}
+.detailFilm{
+    max-width: 900px;
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+}
+.ajoutCom{
+    background-color: white;
 }
 /* ----------------------- CONNEXION ----------------------- */
 

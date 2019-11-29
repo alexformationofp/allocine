@@ -6,12 +6,10 @@ include 'header.php';
 ?>
 
 <div class="container pt-sm-5 fondgris">
-    <div class="row justify-content-center pb-sm-3">
+    
+    <div class="row no-gutters detailFilm">
 
-    </div>
-    <div class="row mb-2">
-
-        <div class="col-md-6 align-self-center presentationFilm">
+        <div class="col-md-7 presentationFilm">
             <h2 class="pb-3"><?php echo $detailsFilm['titre'] ?></h2>
             <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) :
                                 $idReal = $realisateur['id_realisateurs']
@@ -35,17 +33,17 @@ include 'header.php';
             ?>
         </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
             <img src="assets/images/<?php echo $detailsFilm['affiche'] ?>" alt="">
         </div>
     </div>
-    <div class="row synopsis mx-2 mt-4 mb-3 ">
+    <div class="row synopsis detailFilm">
         <p class="titleSynopsis">Synopsis :</p>
         <p><?php echo $detailsFilm['synopsis'] ?></p>
     </div>
     
     <!-- Formulaire Commentaire -->
-    <div class="row m-2">
+    <div class="row detailFilm ajoutCom">
         <?php
         if (isset($_SESSION['idUser'])) { ?>
             <form action="index.php?page=Film&idFilm=<?php echo $idFilm ?>" method="post">
@@ -70,18 +68,17 @@ include 'header.php';
     <div class="commentaires">
         <?php
         foreach ($commentaires as $commentaire) : ?>
-            <div class="row">
-                <div class="commentaire m-3">
-                    <div class="row interlineComs">
-                        <div class="col-md-3">
-                            <p>Pseudo : <?php echo $commentaire['prenom'] ?></p>
-                        </div>
-                        <div class="col-md-2">
+            <div class="row detailFilm">
+                <div class="commentaire">
+                    <div class="row no-gutters interlineComs">
+                        
+                            <p>Commentaire de <?php echo $commentaire['prenom'] ?></p>
+                     
                             <p>Note : <?php echo $commentaire['note'] ?></p>
-                        </div>
-                        <div class="col-md-2">
-                            <p class="dateCommentaire"><?php echo $commentaire['date'] ?></p>
-                        </div>
+                     
+                       
+                            <p class="dateCommentaire">Posté le <?php echo $commentaire['date'] ?></p>
+                      
                     </div>
                     <div class="row no-gutters">
                         <?php echo $commentaire['contenu'] ?>
