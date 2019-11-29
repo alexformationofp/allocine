@@ -62,7 +62,7 @@ include 'header.php';
                 <input type="submit" value="Envoyer">
             </form>
         <?php  } else {
-            echo '<a href="index.php?page=ConnexionUser&provenance=' . $idFilm . '">Pour écrire un commentaire, connectez-vous</a>';
+            echo '<a id="boutonConnect" href="index.php?page=ConnexionUser&provenance=' . $idFilm . '">Pour écrire un commentaire, connectez-vous</a>';
         }
         ?>
     </div>

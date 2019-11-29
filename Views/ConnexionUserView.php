@@ -3,7 +3,7 @@ $title = "Ciné-117 : Connexion / inscription";
 include 'header.php';
 ?>
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-5 mb-5">
         <div class="connexion col-sm-5 fondgris">
             <h3>Connectez-vous :</h3>
             <?php if (isset($_GET['erreur'])) { ?>

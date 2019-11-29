@@ -148,8 +148,19 @@ div {
         }
     }
     input[type=submit]{
-        text-align: center;
-        width: 200px;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: white;
+        font-family: $fs1;
+        font-size: 2em;
+        transition: all .3s ease-in-out;
+        &:hover{
+            background-color: blue;
+            color: white;
+        }
     }
 }
 .ou{
@@ -161,5 +172,21 @@ div {
         font-size: 2em;
         color: white;
         text-transform: uppercase;
+    }
+}
+
+#boutonConnect{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: white;
+    font-family: $fs1;
+    font-size: 1.5em;
+    transition: all .3s ease-in-out;
+    &:hover{
+        background-color: blue;
+        color: white;
     }
 }
