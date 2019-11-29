@@ -5,7 +5,7 @@ include 'header.php';
 
 ?>
 
-<div class="container pt-sm-5 fondgris">
+<div class="container pt-sm-5 pb-2 fondgris">
     <div class="row justify-content-center pb-sm-3">
 
     </div>

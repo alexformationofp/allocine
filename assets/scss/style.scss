@@ -103,8 +103,20 @@ div {
                 font-size: 1rem;
                 font-weight: 700;
             }
-            &.synopsis {
-                text-align: justify;
+            #boutonConnect{
+                display: block;
+                margin: 0 auto;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                background-color: white;
+                font-family: $fs1;
+                font-size: 1.5em;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: blue;
+                    color: white;
+                }
             }
             &.commentaires{
                 .commentaire{
@@ -175,18 +187,39 @@ div {
     }
 }
 
-#boutonConnect{
-    display: block;
-    margin: 0 auto;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: white;
-    font-family: $fs1;
-    font-size: 1.5em;
-    transition: all .3s ease-in-out;
-    &:hover{
-        background-color: blue;
-        color: white;
+/* ----------------------- REALISATEUR  ----------------------- */
+#main{
+    .carteReal{
+        width: 100%;
+        margin-bottom: 20x;
+        transition: all .3s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
+        img{
+            width: 100%;
+        }
+        .titreReal{
+            text-align: center;
+            height: 50px;
+            background-color: grey;
+            /* vertical-align: middle; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+                h5{
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    width: 100%
+                }
+                p{
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+        }
     }
 }
