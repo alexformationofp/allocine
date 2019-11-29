@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 28 nov. 2019 à 10:18
+-- Généré le :  ven. 29 nov. 2019 à 15:20
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -102,16 +102,15 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   PRIMARY KEY (`id_commentaires`),
   KEY `commentaires_films_FK` (`id_films`),
   KEY `commentaires_utilisateurs0_FK` (`id_utilisateurs`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commentaires`
 --
 
 INSERT INTO `commentaires` (`id_commentaires`, `contenu`, `date`, `note`, `id_films`, `id_utilisateurs`) VALUES
-(11, 'Pulp Fiction un film qu\'il est bien !', '2019-11-28 06:18:44', 3, 2, 1),
-(12, 'Pulp Fiction un film qu\'il est bien !', '2019-11-28 06:18:49', 3, 2, 1),
-(13, 'Pulp Fiction un film qu\'il est bien !', '2019-11-28 07:38:37', 3, 2, 1);
+(23, 'Un film captivant et époustouflant, qui allie action, violence, humour et émotion. Une réalisation qui constitue une magnifique introduction à la saga, et dans laquelle on découvre Black Mamba alias Uma Thurman, à la performance exceptionnelle, et qui joue ici le rôle de sa vie. Le reste du casting est également des plus convaincant, les dialogues sont savoureux et la BO est exceptionnelle. Un chef d\'oeuvre incontournable !', '2019-11-28 14:27:46', 4, 1, 28),
+(24, 'ce film est cool', '2019-11-28 15:30:48', 1, 3, 29);
 
 -- --------------------------------------------------------
 
@@ -128,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `films` (
   `duree` int(11) NOT NULL,
   `affiche` varchar(255) NOT NULL,
   PRIMARY KEY (`id_films`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `films`
@@ -201,8 +200,8 @@ INSERT INTO `joue` (`id_acteurs`, `id_films`) VALUES
 (3, 4),
 (4, 4),
 (5, 4),
-(5, 5),
 (7, 5),
+(9, 5),
 (10, 5),
 (11, 6),
 (12, 6),
@@ -324,14 +323,17 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   PRIMARY KEY (`id_utilisateurs`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id_utilisateurs`, `nom`, `prenom`, `email`, `password`) VALUES
-(1, 'Doe', 'John', 'john.doe@gmail.com', '1234');
+(1, 'Doe', 'John', 'john.doe@gmail.com', '1234'),
+(28, 'vandamme', 'Jean-claude', 'jcvd@gmail.com', '1234'),
+(29, 'Sardou', 'Patrick', 'michel.sardou@gmail.com', '1234'),
+(30, 'Bruel', 'Patrick', 'jcvd@gmail.com', '1234');
 
 --
 -- Contraintes pour les tables déchargées
