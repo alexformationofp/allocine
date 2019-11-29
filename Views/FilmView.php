@@ -7,11 +7,12 @@ include 'header.php';
 
 <div class="container pt-sm-5 fondgris">
     <div class="row justify-content-center pb-sm-3">
-        <h2><?php echo $detailsFilm['titre'] ?></h2>
+        
     </div>
-
     <div class="row mb-2">
+        
         <div class="col-md-6 align-self-center presentationFilm">
+            <h2><?php echo $detailsFilm['titre'] ?></h2>
             <p>Réalisé par <?php foreach ($realisateursFilm as $realisateur) :
                                 $idReal = $realisateur['id_realisateurs']
                                 ?>

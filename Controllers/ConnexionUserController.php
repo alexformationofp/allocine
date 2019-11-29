@@ -19,10 +19,11 @@ if (isset($_POST['emailInput'])){
                  header('Location: index.php?page=Film&idFilm='.$provenance);
             }
             else{
-                header('Location: index.php');
+                header('Location: index.php');var_dump('prout');
             }
     }else{
         header('Location: index.php?page=ConnexionUser&erreur');
+        
     }
     
 }else if (isset($_SESSION['idUser'])){

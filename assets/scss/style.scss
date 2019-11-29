@@ -1,6 +1,8 @@
 // @import 'reset';
 @import 'variables';
 @import 'mixin';
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
 body{
     font-family: sans-serif;
@@ -9,10 +11,28 @@ body{
     background-position: center;
     background-attachment: fixed;
     scroll-behavior: smooth;
-
     .fondgris{
         background-color: rgba(255,255,255,0.6);
     }
+    h1{
+        font-family: $fs1;
+    }
+    h2{
+        font-family: $fs2;
+        font-size: 2em;
+    }
+    li{
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
 }
 
 
@@ -39,22 +59,31 @@ footer {
 }
 
 /* ----------------------- HOME VIEW ----------------------- */
-div{
-    &#main{        
-        div{
-            &.container {
-            // padding-top: 5%;
-            // padding-bottom: 5%;
-            .card{
-                &.m-2 {
-                    height: 426.78px;
-                    border: none;
+.homeview{
+    .carteFilm{
+        width: 100%;
+        margin-bottom: 20px;
+        transition: all .3s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+        }
+        img{
+            width: 100%;
+        }
+        .titreFilm{
+            text-align: center;
+            height: 50px;
+            background-color: grey;
+            /* vertical-align: middle; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+                h5{
+                    padding: 0;
+                    margin: 0;
                 }
-                .card-title {
-                font-size: 1rem;
-                } 
-            }
-            }
         }
     }
 }
@@ -88,5 +117,48 @@ div {
                 }
             }
         }
+    }
+}
+/* ----------------------- CONNEXION ----------------------- */
+
+.connexion, .inscription{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    h3{
+        font-family: $fs2;
+    }
+}
+.champ{
+    input[type=text], input[type=password]{
+        border-color: transparent;
+        width: 100%;
+        margin-bottom: 15px;
+        background-color: rgba(255,255,255,.3);
+        transition: all .3s ease-in-out;
+        padding-left: 10px;
+        
+        &:focus{
+            background-color: rgba(255,255,255,.8);
+            border-color: white;
+        }
+        &:focus-within{
+            border-color: white;
+        }
+    }
+    input[type=submit]{
+        text-align: center;
+        width: 200px;
+    }
+}
+.ou{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        font-family: $fs1;
+        font-size: 2em;
+        color: white;
+        text-transform: uppercase;
     }
 }
