@@ -21,7 +21,7 @@ if (isset($_POST['commentaire'])) {
     $notation = $_POST['note'];
   
     envoyerCommentaire($commentaire,$notation,$idFilm,$idUser);
-    // var_dump($idFilm);
+    var_dump($idFilm);
     header('Location: index.php?page=Film&idFilm='.$idFilm);
 };
 

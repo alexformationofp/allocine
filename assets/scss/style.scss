@@ -1,314 +1,394 @@
 // @import 'reset';
-@import 'variables';
-@import 'mixin';
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import "variables";
+@import "mixin";
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
 
-body{
-    font-family: sans-serif;
-    background: url(../images/salleCinema2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    scroll-behavior: smooth;
-    .fondgris{
-        background-color: rgba(255,255,255,0.6);
+body {
+  font-family: sans-serif;
+  background: url(../images/salleCinema2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  .fondgris {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  h1 {
+    font-family: $fs1;
+  }
+  h2 {
+    font-family: $fs2;
+    font-size: 3em;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      color: white;
     }
-    h1{
-        font-family: $fs1;
-    }
-    h2{
-        font-family: $fs2;
-        font-size: 2em;
-    }
-    ul{
-        padding: 0;
-    }
-    li{
-        list-style-type: none;
-    }
-    a{
-        text-decoration: none;
-        color: inherit;
-        &:hover{
-            text-decoration: none;
-            color: inherit;
-        }
-    }
-
+  }
 }
 
-
-
 /* ----------------------- HEADER ----------------------- */
-#bonjour{
-    cursor: default;
-    font-weight: bold;
+#bonjour {
+  cursor: default;
+  font-weight: bold;
+  color: black;
+  &:hover {
     color: black;
-    &:hover{
-        color: black;
-        
-    };
+  }
 }
 
 /* ----------------------- FOOTER ----------------------- */
 
 footer {
-    div{
-        &.container{
-            p{
-                &#copyright{
-                    margin-bottom: initial;
-                }
-            }
+  div {
+    &.container {
+      p {
+        &#copyright {
+          margin-bottom: initial;
         }
+      }
     }
+  }
 }
 
 /* ----------------------- HOME VIEW ----------------------- */
-.homeview{
-    .carteFilm{
-        width: 100%;
-        margin-bottom: 20px;
-        transition: all .3s ease-in-out;
-        &:hover{
-            transform: scale(1.05);
-        }
-        img{
-            width: 100%;
-        }
-        .titreFilm{
-            text-align: center;
-            height: 50px;
-            background-color: grey;
-            /* vertical-align: middle; */
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-                h5{
-                    padding: 0;
-                    margin: 0;
-                }
-        }
+.homeview {
+  .carteFilm {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    &:hover {
+      transform: scale(1.05);
     }
+    img {
+      width: 100%;
+    }
+    .titreFilm {
+      text-align: center;
+      /* height: 50px; */
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7693452380952381) 0%,
+        rgba(0, 0, 0, 0.6292892156862745) 61%,
+        rgba(0, 95, 255, 0) 100%
+      );
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      h5 {
+        padding: 0;
+        margin: 0;
+        font-size: calc(12px + 0.5vw);
+      }
+    }
+  }
 }
 
 /* ----------------------- FILM VIEW ----------------------- */
 
 div {
-    &.container{
-        div{
-            &.presentationFilm{
-                font-size: 1em;
-                h2{
-                    font-size: 3em;
-                }
-            }
-            .titleSynopsis{
-                font-size: 1rem;
-                font-weight: 700;
-            }
-            #boutonConnect{
-                display: block;
-                margin: 0 auto;
-                border: none;
-                border-radius: 5px;
-                padding: 5px 10px;
-                background-color: white;
-                font-family: $fs1;
-                font-size: 1.5em;
-                transition: all .3s ease-in-out;
-                &:hover{
-                    background-color: blue;
-                    color: white;
-                }
-            }
-            &.commentaires{
-                .commentaire{
-                    width: 100%;
-                }
-                p:nth-of-type(2n){
-                    padding: 0 15px;
-                }
-              
-            }
+  &.container {
+    div {
+      &.presentationFilm {
+        font-size: 1em;
+        h2 {
+          font-size: 3em;
         }
+      }
+      .titleSynopsis {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      &.commentaires {
+        border-bottom: solid 1px grey;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        &:last-of-type {
+          border: none;
+        }
+        p {
+          display: inline-block;
+          margin-bottom: 4px;
+        }
+        p:nth-of-type(2n) {
+          padding: 0 15px;
+        }
+        .dateCom {
+          font-style: italic;
+          font-size: 0.9em;
+        }
+      }
     }
+  }
 }
-.detailFilm{
-    max-width: 900px;
+.detailFilm {
+  max-width: 900px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+  }
+}
+.ajoutCom {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  p {
+    display: inline-block;
+  }
+  .divNote {
+    display: inline-block;
+    float: left;
+  }
+  .radio {
+    display: inline-block;
+  }
+  textarea {
     margin: 0 auto;
-    img{
-        width: 100%;
-    }
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  input[type="submit"] {
+    float: right;
+  }
 }
-.ajoutCom{
-    background-color: white;
+.boutonConnect {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
+  font-family: $fs1;
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: #001A35;
+    color: white;
+  }
 }
+
 /* ----------------------- CONNEXION ----------------------- */
 
-.connexion, .inscription{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 100%;
-    h3{
-        font-family: $fs2;
-    }
+.connexion,
+.inscription {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  h3 {
+    font-family: $fs2;
+  }
 }
-.champ{
-    input[type=text], input[type=password]{
-        border-color: transparent;
-        width: 100%;
-        margin-bottom: 15px;
-        background-color: rgba(255,255,255,.3);
-        transition: all .3s ease-in-out;
-        padding-left: 10px;
-        
-        &:focus{
-            background-color: rgba(255,255,255,.8);
-            border-color: white;
-        }
-        &:focus-within{
-            border-color: white;
-        }
+.champ {
+  input[type="text"],
+  input[type="password"] {
+    border-color: transparent;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    padding-left: 10px;
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-color: white;
     }
-    input[type=submit]{
-        display: block;
-        margin: 0 auto;
-        border: none;
-        border-radius: 5px;
-        padding: 5px 10px;
-        background-color: white;
-        font-family: $fs1;
-        font-size: 2em;
-        transition: all .3s ease-in-out;
-        &:hover{
-            background-color: blue;
-            color: white;
-        }
+    &:focus-within {
+      border-color: white;
     }
+  }
 }
-.ou{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p{
-        font-family: $fs1;
-        font-size: 2em;
-        color: white;
-        text-transform: uppercase;
-    }
+.ou {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: $fs1;
+    font-size: 2em;
+    color: yellow;
+    text-transform: uppercase;
+  }
 }
 
 /* ----------------------- REALISATEUR  ----------------------- */
-#main{
-    .carteReal{
-        width: 100%;
-        margin-bottom: 20x;
-        transition: all .3s ease-in-out;
-        &:hover{
-            transform: scale(1.05);
-        }
-        img{
-            width: 100%;
-        }
-        .titreReal{
-            text-align: center;
-            height: 50px;
-            background-color: grey;
-            /* vertical-align: middle; */
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-                h5{
-                    padding: 0;
-                    margin: 0;
-                    display: block;
-                    width: 100%
-                }
-                p{
-                    display: block;
-                    width: 100%;
-                    margin: 0;
-                }
-        }
+#main {
+  .carteReal {
+    width: 100%;
+    margin-bottom: 20x;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
     }
+    img {
+      width: 100%;
+    }
+    .titreReal {
+      text-align: center;
+      height: 50px;
+      background-color: grey;
+      /* vertical-align: middle; */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      h5 {
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+      }
+      p {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
 }
 
 /* ----------------------- DETAIL REALISATEURS  ----------------------- */
-#main{
-    .carteDetailReal{
-        width: 100%;
-        margin-bottom: 20x;
-        transition: all .3s ease-in-out;
-        &:hover{
-            transform: scale(1.05);
-        }
-        img{
-            width: 100%;
-        }
-        .titreDetailReal{
-            text-align: center;
-            height: 50px;
-            background-color: grey;
-            /* vertical-align: middle; */
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-                h5{
-                    padding: 0;
-                    margin: 0;
-                    display: block;
-                    width: 100%
-                }
-                p{
-                    display: block;
-                    width: 100%;
-                    margin: 0;
-                }
-        }
+#main {
+  .carteDetailReal {
+    width: 100%;
+    margin-bottom: 20x;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
     }
+    img {
+      width: 100%;
+    }
+    .titreDetailReal {
+      text-align: center;
+      height: 50px;
+      background-color: grey;
+      /* vertical-align: middle; */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      h5 {
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+      }
+      p {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
 }
 
 /* ----------------------- DETAIL ACTEURS  ----------------------- */
-#main{
-    .carteDetailActeur{
+
+.filmsActeur {
+  width: 100%;
+  display: flex;
+
+  .carteFilm {
+    width: 110px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    position: relative;
+    margin-right: 15px;
+    filter: grayscale(1);
+    &:hover {
+      filter: grayscale(0);
+    }
+    img {
+      width: 100%;
+    }
+    .titreFilm {
+      text-align: center;
+      /* height: 50px; */
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7693452380952381) 0%,
+        rgba(0, 0, 0, 0.6292892156862745) 61%,
+        rgba(0, 95, 255, 0) 100%
+      );
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      h5 {
+        padding: 0;
+        margin: 0;
+        font-size: calc(12px + 0.5vw);
+      }
+    }
+  }
+}
+
+/* ----------------------- LISTE ACTEURS  ----------------------- */
+
+.listeActeurs {
+  a {
+      width: 25%;
+      background-color: rgba(0, 0, 0, 0.3);
+    //   margin: 10px;
+      min-width: 220px;
+    .miniActeur {
+      display: flex;
+      
+      align-items: center;
+      
+      img {
+        width: 50px;
+        margin: 5px;
+      }
+      p {
+        margin-bottom: 0;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+    .listeActeurs{
+         a{
         width: 100%;
-        margin-bottom: 20x;
-        transition: all .3s ease-in-out;
-        &:hover{
-            transform: scale(1.05);
-        }
-        img{
-            width: 100%;
-        }
-        .titreDetailActeur{
-            text-align: center;
-            height: 50px;
-            background-color: grey;
-            /* vertical-align: middle; */
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-                h5{
-                    padding: 0;
-                    margin: 0;
-                    display: block;
-                    width: 100%
-                }
+            .miniActeur{
                 p{
-                    display: block;
+                    text-align: center;
                     width: 100%;
-                    margin: 0;
+                    padding-left: 0;
                 }
+             }
         }
+        
+    }
+    body h2{
+        font-size: 2em;
     }
 }

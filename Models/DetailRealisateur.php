@@ -6,7 +6,7 @@ function detaillerRealisateur($real){
     
     $details =$bdd->prepare('SELECT * FROM realisateurs WHERE id_realisateurs =?');
     $details->execute([$real]);    
-    $details = $details->fetchAll();
+    $details = $details->fetchAll()[0];
     return $details;
 };
 

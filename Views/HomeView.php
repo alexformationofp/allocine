@@ -5,11 +5,11 @@ include 'header.php';
 
 ?>
 
-<div id="main" class="">
 
-    <div class="container fondgris homeview pt-2 pt-sm-5 pb-2">
+
+    <div class="container fondgris homeview pt-3 pt-sm-5 pb-2">
         <div class="row justify-content-center">
-            <h2 class="titreFilms mb-4"> Liste des Films</h2>
+            <h2 class="titreFilms mb-2 mb-sm-4">Des films bien sympa !</h2>
         </div>
         <div class="row justify-content-center mb-3 mt-3">
             <?php
@@ -31,7 +31,7 @@ include 'header.php';
             ?>
         </div>
     </div>
-</div>
+
 <?php
 
 // include 'contact-form.php';

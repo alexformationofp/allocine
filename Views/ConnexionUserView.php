@@ -22,7 +22,7 @@ include 'header.php';
                     <input type="password" name="passwordInput" id="passwordInput">
                 </div>
                 <div class="champ">
-                     <input type="submit" value="Connexion">
+                     <input class="boutonConnect" type="submit" value="Connexion">
                 </div>              
             </form>
         </div>
@@ -49,7 +49,7 @@ include 'header.php';
                     <input type="password" name="nouveauPassword" id="nouveauPassword">
                 </div>
                 <div class="champ">
-                    <input type="submit" value="S'inscrire">
+                    <input class="boutonConnect" type="submit" value="S'inscrire">
                 </div>
                 
 
